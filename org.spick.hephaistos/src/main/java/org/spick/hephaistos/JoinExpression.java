@@ -1,7 +1,5 @@
 package org.spick.hephaistos;
 
-import java.util.List;
-
 public class JoinExpression implements FromExpression {
 
 	private TableExpression left;
