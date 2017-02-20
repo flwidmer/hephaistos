@@ -24,6 +24,10 @@ public class And implements Condition, IPrintable {
 	public static And of(String string) {
 		return new And(string);
 	}
+	
+	public static And of(Condition condition) {
+		return new And(condition.print());
+	}
 
 	@Override
 	public String print() {
