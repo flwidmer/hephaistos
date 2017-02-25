@@ -1,6 +1,10 @@
-package org.spick.hephaistos;
+package org.spick.hephaistos.from;
 
 import java.util.Objects;
+
+import org.spick.hephaistos.condition.Condition;
+import org.spick.hephaistos.condition.Equals;
+import org.spick.hephaistos.table.TableExpression;
 
 /**
  * Join Expression, joining two tables with x join y on

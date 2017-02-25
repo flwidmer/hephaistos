@@ -1,6 +1,8 @@
-package org.spick.hephaistos;
+package org.spick.hephaistos.column;
 
 import java.util.Objects;
+
+import org.spick.hephaistos.select.SelectColumn;
 
 /**
  * A column that has an alias name

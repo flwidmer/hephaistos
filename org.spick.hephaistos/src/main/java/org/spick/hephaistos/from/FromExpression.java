@@ -1,4 +1,6 @@
-package org.spick.hephaistos;
+package org.spick.hephaistos.from;
+
+import org.spick.hephaistos.internal.IPrintable;
 
 /**
  * From Expression interface

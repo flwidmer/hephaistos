@@ -1,10 +1,14 @@
-package org.spick.hephaistos;
+package org.spick.hephaistos.from;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
+import org.spick.hephaistos.condition.Condition;
+import org.spick.hephaistos.internal.IPrintable;
+import org.spick.hephaistos.select.Select;
 import org.spick.hephaistos.util.ListUtil;
+import org.spick.hephaistos.where.Where;
 
 /**
  * From list, can contain various FromExpressions

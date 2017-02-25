@@ -1,6 +1,10 @@
-package org.spick.hephaistos;
+package org.spick.hephaistos.where;
 
 import java.util.Objects;
+
+import org.spick.hephaistos.condition.Condition;
+import org.spick.hephaistos.from.From;
+import org.spick.hephaistos.internal.IPrintable;
 
 /**
  * Where condition

@@ -1,4 +1,4 @@
-package org.spick.hephaistos;
+package org.spick.hephaistos.select;
 
 import java.util.Arrays;
 import java.util.List;
@@ -6,6 +6,10 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import org.spick.hephaistos.from.From;
+import org.spick.hephaistos.from.FromExpression;
+import org.spick.hephaistos.internal.IPrintable;
+import org.spick.hephaistos.table.TableExpression;
 import org.spick.hephaistos.util.ListUtil;
 /**
  * select expresison starting a select statement

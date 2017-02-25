@@ -3,7 +3,7 @@ package org.spick.hephaistos.util;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.spick.hephaistos.IPrintable;
+import org.spick.hephaistos.internal.IPrintable;
 
 public class ListUtil {
 

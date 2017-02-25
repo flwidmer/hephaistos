@@ -1,14 +1,17 @@
 package org.spick.hephaistos;
 
-import static org.spick.hephaistos.Column.column;
-import static org.spick.hephaistos.TableExpression.table;
 import static org.spick.hephaistos.TestUtil.assertQueryEqual;
+import static org.spick.hephaistos.column.Column.column;
+import static org.spick.hephaistos.table.TableExpression.table;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import org.junit.Test;
+import org.spick.hephaistos.condition.And;
+import org.spick.hephaistos.condition.Equals;
+import org.spick.hephaistos.internal.IPrintable;
 
 public class TestSQL {
 

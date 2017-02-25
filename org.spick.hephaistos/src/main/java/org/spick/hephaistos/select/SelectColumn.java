@@ -1,4 +1,6 @@
-package org.spick.hephaistos;
+package org.spick.hephaistos.select;
+
+import org.spick.hephaistos.internal.IPrintable;
 
 /**
  * Select column interface for the different types

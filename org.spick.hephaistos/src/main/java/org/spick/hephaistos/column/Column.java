@@ -1,4 +1,7 @@
-package org.spick.hephaistos;
+package org.spick.hephaistos.column;
+
+import org.spick.hephaistos.internal.StringExpression;
+import org.spick.hephaistos.select.SelectColumn;
 
 /**
  * A Column

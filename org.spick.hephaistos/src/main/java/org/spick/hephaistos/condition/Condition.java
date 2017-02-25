@@ -1,4 +1,6 @@
-package org.spick.hephaistos;
+package org.spick.hephaistos.condition;
+
+import org.spick.hephaistos.internal.IPrintable;
 
 /**
  * Condition interface

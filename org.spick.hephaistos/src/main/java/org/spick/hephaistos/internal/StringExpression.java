@@ -1,4 +1,4 @@
-package org.spick.hephaistos;
+package org.spick.hephaistos.internal;
 
 import java.util.Objects;
 

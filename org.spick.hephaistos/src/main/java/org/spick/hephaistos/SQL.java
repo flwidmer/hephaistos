@@ -3,6 +3,10 @@ package org.spick.hephaistos;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import org.spick.hephaistos.column.Column;
+import org.spick.hephaistos.select.Select;
+import org.spick.hephaistos.select.SelectColumn;
+
 /**
  * Convenience class for starting a query
  * @author Florian

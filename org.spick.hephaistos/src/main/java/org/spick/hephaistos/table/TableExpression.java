@@ -1,6 +1,10 @@
-package org.spick.hephaistos;
+package org.spick.hephaistos.table;
 
 import java.util.Objects;
+
+import org.spick.hephaistos.from.FromExpression;
+import org.spick.hephaistos.from.JoinExpression;
+import org.spick.hephaistos.internal.StringExpression;
 
 public class TableExpression extends StringExpression implements FromExpression {
 
