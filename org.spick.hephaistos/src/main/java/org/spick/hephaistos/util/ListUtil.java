@@ -8,7 +8,7 @@ import org.spick.hephaistos.IPrintable;
 public class ListUtil {
 
 	public static String commaList(List<? extends IPrintable> list ) {
-		return joinList(list, ",");
+		return joinList(list, ", ");
 	}
 
 	public static String joinList(List<? extends IPrintable> list, String delimiter) {
