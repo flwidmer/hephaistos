@@ -1,5 +1,13 @@
 package org.spick.hephaistos;
 
+import java.util.Objects;
+
+/**
+ * Join Expression, joining two tables with x join y on
+ * Typically an inner join
+ * @author Florian
+ *
+ */
 public class JoinExpression implements FromExpression {
 
 	private TableExpression left;
@@ -7,6 +15,8 @@ public class JoinExpression implements FromExpression {
 	private Condition condition;
 
 	public JoinExpression(TableExpression left, TableExpression right) {
+		Objects.requireNonNull(left);
+		Objects.requireNonNull(right);
 		this.left = left;
 		this.right = right;
 	}

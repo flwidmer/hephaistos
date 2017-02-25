@@ -2,20 +2,26 @@ package org.spick.hephaistos;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import org.spick.hephaistos.util.ListUtil;
-
+/**
+ * select expresison starting a select statement
+ * @author Florian
+ *
+ */
 public class Select implements IPrintable {
 
 	private List<? extends SelectColumn> selectList;
 
 	public Select(SelectColumn[] selectList) {
-		this.selectList = Arrays.asList(selectList);
+		this(Arrays.asList(selectList));
 	}
 
 	public Select(List<? extends SelectColumn> selectList) {
+		Objects.requireNonNull(selectList);
 		this.selectList = selectList;
 	}
 

@@ -3,6 +3,11 @@ package org.spick.hephaistos;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+/**
+ * Convenience class for starting a query
+ * @author Florian
+ *
+ */
 public final class SQL {
 
 	public static Select select(SelectColumn ... selectList) {

@@ -1,5 +1,7 @@
 package org.spick.hephaistos;
 
+import java.util.Objects;
+
 public class TableExpression extends StringExpression implements FromExpression {
 
 	private String alias;
@@ -11,6 +13,7 @@ public class TableExpression extends StringExpression implements FromExpression 
 	
 	public TableExpression(String table, String alias) {
 		super(table + " " + alias);
+		Objects.requireNonNull(alias);
 		this.alias  = alias;
 	}
 

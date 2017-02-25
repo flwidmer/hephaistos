@@ -1,5 +1,12 @@
 package org.spick.hephaistos;
 
+import java.util.Objects;
+
+/**
+ * A column that has an alias name
+ * @author Florian
+ *
+ */
 public class AliasColumn implements SelectColumn{
 	
 	private String alias;
@@ -10,6 +17,8 @@ public class AliasColumn implements SelectColumn{
 	}
 	
 	public AliasColumn(String column, String alias) {
+		Objects.requireNonNull(column);
+		Objects.requireNonNull(alias);
 		this.column = column;
 		this.alias = alias;
 	}

@@ -1,5 +1,10 @@
 package org.spick.hephaistos;
 
+/**
+ * A Column
+ * @author Florian
+ *
+ */
 public class Column extends StringExpression implements SelectColumn{
 
 	public Column(String column) {

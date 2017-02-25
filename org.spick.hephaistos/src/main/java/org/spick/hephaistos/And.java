@@ -2,14 +2,21 @@ package org.spick.hephaistos;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import org.spick.hephaistos.util.ListUtil;
 
-public class And implements Condition, IPrintable {
+/**
+ * A list of AND conditions 
+ * @author Florian
+ *
+ */
+public class And implements Condition {
 
 	private List<String> stringConditions = new ArrayList<>();
 
 	public And(String string) {
+		Objects.requireNonNull(string);
 		stringConditions.add(string);
 	}
 
