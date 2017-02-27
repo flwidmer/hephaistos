@@ -4,40 +4,42 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import org.spick.hephaistos.util.ListUtil;
+import org.spick.hephaistos.util.StringUtil;
 
 /**
  * Or condition
+ * 
  * @author Florian
  *
  */
-public class Or implements Condition{
+public class Or extends AbstractListBasedCondition {
 
-	private List<String> stringConditions = new ArrayList<>();
-	
+	private static final String OR = "or";
+
 	public Or(String string) {
-		Objects.requireNonNull(string);
-		stringConditions.add(string);
+		super(string);
 	}
 
-	public void or(String string) {
-		stringConditions.add(string);
+	public Or or(String string) {
+		Objects.requireNonNull(string);
+		getConditions().add(string);
+		return this;
 	}
-	
-	public void or(Condition condition) {
-		stringConditions.add(condition.print());
+
+	public Or or(Condition condition) {
+		return or(condition.print());
 	}
 
 	public static Or of(String string) {
 		return new Or(string);
 	}
-	
+
 	public static Or of(Condition condition) {
 		return new Or(condition.print());
 	}
 
-	@Override
-	public String print() {
-		return ListUtil.joinStringList(stringConditions, " or ");
+	protected String getJoinKeyword() {
+		return OR;
 	}
+
 }

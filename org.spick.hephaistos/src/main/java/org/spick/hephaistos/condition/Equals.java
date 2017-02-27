@@ -2,6 +2,8 @@ package org.spick.hephaistos.condition;
 
 import java.util.Objects;
 
+import org.spick.hephaistos.util.StringUtil;
+
 /**
  * Equals condition
  * 
@@ -26,7 +28,7 @@ public class Equals implements Condition {
 
 	@Override
 	public String print() {
-		return " " + left + " = " + right + " ";
+		return StringUtil.wrapInSpaces(left + " = " + right);
 	}
 
 }

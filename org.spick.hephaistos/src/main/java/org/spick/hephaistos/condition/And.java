@@ -1,31 +1,25 @@
 package org.spick.hephaistos.condition;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
-
-import org.spick.hephaistos.util.ListUtil;
-
 /**
  * A list of AND conditions 
  * @author Florian
  *
  */
-public class And implements Condition {
+public class And extends AbstractListBasedCondition {
 
-	private List<String> stringConditions = new ArrayList<>();
+	private static final String AND = "and";
 
 	public And(String string) {
-		Objects.requireNonNull(string);
-		stringConditions.add(string);
+		super(string);
 	}
 
-	public void and(String string) {
-		stringConditions.add(string);
+	public And and(String string) {
+		getConditions().add(string);
+		return this;
 	}
 	
-	public void and(Condition condition) {
-		stringConditions.add(condition.print());
+	public And and(Condition condition) {
+		return and(condition.print());
 	}
 
 	public static And of(String string) {
@@ -37,8 +31,8 @@ public class And implements Condition {
 	}
 
 	@Override
-	public String print() {
-		return ListUtil.joinStringList(stringConditions, " and ");
+	protected String getJoinKeyword() {
+		return AND;
 	}
 
 }
