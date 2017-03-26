@@ -4,8 +4,10 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import org.spick.hephaistos.column.Column;
+import org.spick.hephaistos.insert.Insert;
 import org.spick.hephaistos.select.Select;
 import org.spick.hephaistos.select.SelectColumn;
+import org.spick.hephaistos.table.TableExpression;
 
 /**
  * Convenience class for starting a query
@@ -22,4 +24,7 @@ public final class SQL {
 		return new Select(Stream.of(selectList).map(Column::new).collect(Collectors.toList()));
 	}
 	
+	public static Insert insertInto(TableExpression table) {
+		return new Insert(table);
+	}
 }

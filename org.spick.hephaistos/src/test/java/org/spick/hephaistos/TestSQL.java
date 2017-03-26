@@ -1,5 +1,6 @@
 package org.spick.hephaistos;
 
+import static org.junit.Assert.*;
 import static org.spick.hephaistos.column.Column.column;
 import static org.spick.hephaistos.table.TableExpression.table;
 import static org.spick.hephaistos.test.TestUtil.assertQueryEqual;
@@ -12,6 +13,7 @@ import org.junit.Test;
 import org.spick.hephaistos.condition.And;
 import org.spick.hephaistos.condition.Equals;
 import org.spick.hephaistos.internal.IPrintable;
+import org.spick.hephaistos.table.TableExpression;
 /**
  * General Tests, testing against complete queries
  * @author Florian
@@ -48,5 +50,26 @@ public class TestSQL {
 		
 		String q3 = SQL.select(column("TEST")).from(table("test1").join(table("test2", "t2")).on("ttt")).print();
 		assertQueryEqual("select TEST from test1 join test2 t2 on test1.ttt = t2.ttt", q3);
+	}
+	
+	@Test
+	public void testInsertWithColumns() throws Exception {
+		String dml1 = SQL.insertInto(table("test","t")).columns("col1", "col2").values("val1", "val2").print();
+		assertQueryEqual("insert into test t (col1, col2) values (val1, val2)", dml1);
+	}
+	
+	@Test
+	public void testInsertWithoutColumns() throws Exception {
+		
+	}
+	
+	@Test
+	public void testInsertWithSelectAndColumns() throws Exception {
+		
+	}
+	
+	@Test
+	public void testInsertWithSelect() throws Exception {
+		
 	}
 }

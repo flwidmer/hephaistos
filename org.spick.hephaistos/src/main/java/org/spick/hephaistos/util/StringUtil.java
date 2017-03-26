@@ -1,8 +1,12 @@
 package org.spick.hephaistos.util;
 
+import static java.util.stream.Collectors.toList;
+
 import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+
+import org.spick.hephaistos.internal.IPrintable;
 
 /**
  * String based util functions
@@ -11,7 +15,9 @@ import java.util.stream.Collectors;
  *
  */
 public final class StringUtil {
-
+	
+	public static final String COMMA = ",";
+	
 	private StringUtil() {
 	}
 
@@ -20,7 +26,7 @@ public final class StringUtil {
 	}
 
 	public static String wrapInSpaces(String in) {
-		return wrap(" ", " ", in);
+		return wrap(" ", in);
 	}
 
 	private static String wrap(String both, String in) {
@@ -38,5 +44,9 @@ public final class StringUtil {
 		}
 		return wrapInParentheses(ListUtil.joinStringList(
 				list.stream().map(mappingFunction).collect(Collectors.toList()), wrapInSpaces(delimiter)));
+	}
+
+	public static String wrapPrintableListAndJoin(List<? extends IPrintable> columns, String delimiter) {
+		return wrapListAndJoin(columns.stream().map(IPrintable::print).collect(toList()), delimiter);
 	}
 }
